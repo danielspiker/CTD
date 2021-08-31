@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+
+body {
+  background-color: bisque;
+  font-family: 'ZCOOL KuaiLe', cursive;
+  text-align: center;
+  background-color: darkorange;
+}
+h1,
+h2 {
+  background-color: bisque;
+}
+header {
+  background-image: url('https://manualdosgames.com/wp-content/uploads/2020/09/Previs%C3%B5es_dos_Simpsons.jpg');
+  background-size: cover;
+  margin: 30px;
+  border: 20px double green;
+  padding: 20% 60px;
+  height: 50vh;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+button {
+  width: 200px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+
+  background-color: blueviolet;
+}

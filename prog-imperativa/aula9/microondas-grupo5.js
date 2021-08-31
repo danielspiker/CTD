@@ -44,6 +44,7 @@ function microondas(comida, tempo) {
   } else {
     console.log('Prato inexistente..')
   }
+  console.log('Pi Pi Piii!!!')
 }
 
-microondas('feijao', 36)
+microondas('feijao', 24)
