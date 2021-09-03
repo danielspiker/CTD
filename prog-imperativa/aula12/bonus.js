@@ -3,9 +3,9 @@ function digitalHouse(a, b) {
     if ((a % i == 0 || i % a == 0) && (b % i == 0 || i % b == 0)) {
       console.log('digital house')
     } else if (a % i == 0 || i % a == 0) {
-      console.log('digital')
+      console.log('Digital')
     } else if (b % i == 0 || i % b == 0) {
-      console.log('house')
+      console.log('House')
     } else {
       console.log(i)
     }
