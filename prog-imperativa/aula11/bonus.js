@@ -1,6 +1,6 @@
-const jonas = [5, 8, 4, 9, 5]
-const rodrix = [8, 7, 8, 6, 8]
-const guarabira = [7, 5, 10, 8, 3]
+const a = [5, 8, 4, 9, 5]
+const b = [8, 7, 8, 6, 8]
+const c = [7, 5, 10, 8, 3]
 
 function pontuacaoMedia(pontuacao) {
   let soma = 0
@@ -9,7 +9,7 @@ function pontuacaoMedia(pontuacao) {
   }
   return soma / pontuacao.length
 }
-//console.log(pontuacaoMedia(rodrix))
+//console.log(pontuacaoMedia(b))
 
 function pontuacaoMaior(pontuacao) {
   var maior = 0
@@ -20,36 +20,36 @@ function pontuacaoMaior(pontuacao) {
   }
   return maior
 }
-//console.log(pontuacaoMaior(jonas))
+console.log(pontuacaoMaior(c))
 
 function competicao(a, b, c) {
-  let medias = []
-  let maiores = []
-
   let mediaA = pontuacaoMedia(a)
   let mediaB = pontuacaoMedia(b)
   let mediaC = pontuacaoMedia(c)
-  medias.push(mediaA, mediaB, mediaC)
 
   let maiorA = pontuacaoMaior(a)
   let maiorB = pontuacaoMaior(b)
   let maiorC = pontuacaoMaior(c)
-  maiores.push(maiorA, maiorB, maiorC)
 
-  let maiorMedia = 0
-  for (let i = 0; i < medias.length; i++) {
-    if (medias[i] > maiorMedia) {
-      maiorMedia = medias[i]
-    }
+  if (mediaA > mediaB && mediaA > mediaC) {
+    console.log('maior media foi de A')
+  } else if (mediaB > mediaA && mediaB > mediaC) {
+    console.log('maior media foi de B')
+  } else if (mediaC > mediaA && mediaC > mediaB) {
+    console.log('maior media foi de C')
+  } else {
+    console.log('nao houve vencedor na media')
   }
 
-  let maiorEtip = 0
-  for (let i = 0; i < maiores.length; i++) {
-    if (maiores[i] > maiorEtip) {
-      maiorEtip = maiores[i]
-    }
+  if (maiorA > maiorB && maiorA > maiorC) {
+    console.log('maior e-tip foi de A')
+  } else if (maiorB > maiorA && maiorB > maiorC) {
+    console.log('maior e-tip foi de B')
+  } else if (maiorC > maiorA && maiorC > maiorB) {
+    console.log('maior e-tip foi de C')
+  } else {
+    console.log('nao houve vencedor na e-tip')
   }
-  return `maior media: ${maiorMedia} e maior nota: ${maiorEtip}`
 }
 
-console.log(competicao(jonas, rodrix, guarabira))
+console.log(competicao(a, b, c))

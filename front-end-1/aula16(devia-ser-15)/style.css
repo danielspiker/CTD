@@ -1,0 +1,42 @@
+body {
+  height: 2000px;
+  background-color: orange;
+}
+
+img {
+  height: 300px;
+  width: 180px;
+}
+img:hover {
+  height: 600px;
+  width: 360px;
+}
+
+il:nth-child(1) {
+  background-color: rgb(255, 192, 241);
+}
+
+p::first-letter {
+  color: blueviolet;
+}
+
+input:focus {
+  background-color: blueviolet;
+}
+
+.caixa:checked {
+  height: 50px;
+  width: 50px;
+}
+
+a:visited {
+  color: aqua;
+}
+
+a:hover {
+  color: beige;
+  background-color: black;
+}
+button:disabled {
+  color: black;
+}

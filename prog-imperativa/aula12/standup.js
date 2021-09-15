@@ -18,18 +18,16 @@ function encontrarGanhador(a, b) {
       pontosA++
     } else if (b[i] > a[i]) {
       pontosB++
-    } else {
-      continue
     }
   }
-  let ganhador = 0
+
   if (pontosA > pontosB) {
-    ganhador = 'Alice'
+    console.log('Alice venceu')
   } else if (pontosB > pontosA) {
-    ganhador = 'Bob'
+    console.log('Bob venceu')
   } else {
-    ganhador = 'Empatou :P'
+    console.log('Empate')
   }
-  return ganhador
 }
-console.log('o vencedor é: ' + encontrarGanhador(alice, bob))
+
+encontrarGanhador(alice, bob)

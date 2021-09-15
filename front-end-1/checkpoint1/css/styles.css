@@ -3,6 +3,8 @@
 body {
   height: 1000px;
   background-image: url('https://i.pinimg.com/originals/4b/90/d1/4b90d1b671ae7f0a3130304f2c813820.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 header {

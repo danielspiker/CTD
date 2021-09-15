@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/front-end-1/aula13/css/style.css" />
+    <title>Formulários</title>
+  </head>
+  <body>
+    <div class="titulo">Um Formulário</div>
+
+    <form action="" method="POST">
+      <fieldset>
+        <legend>Cadastro</legend>
+
+        <div class="item">
+          <label for="nome">Nome:</label>
+          <input
+            tabindex="1"
+            type="text"
+            name="nome"
+            id="nome"
+            placeholder="Teu nome ae"
+            required
+          />
+        </div>
+        <div class="item">
+          <label for="senha">Senha:</label>
+          <input
+            minlength="6"
+            tabindex="3"
+            type="password"
+            name="senha"
+            id="senha"
+            required
+          />
+        </div>
+        <div class="item">
+          <label for="email">E-mail:</label>
+          <input tabindex="2" type="email" name="email" id="email" required />
+        </div>
+        <h6>Campos de preenchimento obrigatório</h6>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Comentários</legend>
+        <div class="item">
+          <label for="comentario">Faça seu comentário sarcástico:</label>
+          <textarea name="comentario" id="comentario" cols="30" rows="10">
+Conteúdo</textarea
+          >
+        </div>
+      </fieldset>
+      <br />
+      <fieldset>
+        <legend>Opções</legend>
+        <div class="item">
+          <label for="cores">Escolha uma cor:</label>
+          <select name="cores" id="cores">
+            <optgroup label="RGB">
+              <option value="red">Vermelho</option>
+              <option value="blue">Azul</option>
+              <option value="green">Verde</option>
+            </optgroup>
+            <optgroup label="P&B">
+              <option value="gray">Cinza</option>
+              <option value="black">Preto</option>
+              <option value="white">Branco</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="item">
+          Gostou da cor escolhida?
+          <br />
+          <input type="radio" id="yes" name="cor" value="SIM" />
+          <label for="yes">Sim</label>
+          <br />
+          <input type="radio" id="no" name="cor" value="NAO" />
+          <label for="no">Não</label>
+          <br />
+          <input type="radio" id="maybe" name="cor" value="TALVEZ" />
+          <label for="maybe">Talvez</label>
+        </div>
+        <div class="item">
+          Quais cores ficaram faltando?
+          <br />
+          <input type="checkbox" id="verde" name="faltando" value="VERDE" />
+          <label for="yellow">Amarelo</label>
+          <br />
+          <input type="checkbox" id="roxo" name="faltando" value="ROXO" />
+          <label for="roxo">Roxo</label>
+          <br />
+          <input type="checkbox" id="laranja" name="faltando" value="LARANJA" />
+          <label for="laranja">Laranja</label>
+        </div>
+      </fieldset>
+      <input type="file" id="arquivo" name="arquivo" accept="image/jpg" />
+      <div class="item">
+        <button type="reset">Apagar</button>
+        <button type="submit">Enviar</button>
+      </div>
+    </form>
+  </body>
+</html>
