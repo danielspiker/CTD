@@ -3,8 +3,10 @@ let readline = require('readline-sync')
 
 let multiploA = readline.question('Como devo chamar o primeiro multiplo?')
 let multiploB = readline.question('Como devo chamar o segundo multiplo?')
+let numA = readline.question('digite primeiro numero: ')
+let numB = readline.question('digite segundo numero: ')
 
-function digitalHouse(a, b) {
+let digitalHouse = (a, b) => {
   for (let i = 1; i <= 100; i++) {
     if (i % a == 0 && i % b == 0) {
       console.log(multiploA + ' ' + multiploB)
@@ -18,4 +20,4 @@ function digitalHouse(a, b) {
   }
 }
 
-digitalHouse(12, 7)
+digitalHouse(numA, numB)

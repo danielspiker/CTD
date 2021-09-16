@@ -1,5 +1,9 @@
-let soma = (a, b) => a + b
+let soma = (numeroA, numeroB) => numeroA + numeroB
 
-let media = (a, b, callback) => callback(a, b) / 2
+let mediaDeDoisNumeros = (numeroA, numeroB, funcao) =>
+  funcao(numeroA, numeroB) / 2
 
-console.log(media(11, 15, soma))
+console.log(mediaDeDoisNumeros(11, 15, soma))
+
+// setTimeout(() => console.log('segura essa..'), 3000)
+// setTimeout(() => console.log('segura essa tb..'), 5000)
