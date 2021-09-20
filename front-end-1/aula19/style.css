@@ -1,0 +1,14 @@
+.main-menu {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+header {
+  height: 25vh;
+  background-color: blueviolet;
+  display: flex;
+}
