@@ -1,0 +1,42 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 8rem;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: greenyellow;
+  position: sticky;
+  top: 0;
+}
+
+#menu {
+  width: 150%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.banner {
+  background-color: gold;
+  height: 100vh;
+}
+
+nav {
+  padding: 1rem;
+  display: flex;
+  background-color: coral;
+}

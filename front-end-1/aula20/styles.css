@@ -1,5 +1,5 @@
 body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   display: grid;
   grid-template-columns: 150px 1fr 200px;
   grid-template-areas:
@@ -21,6 +21,7 @@ body {
     grid-template-rows: auto 1fr auto;
   }
 }
+
 body header {
   font-size: x-large;
   background-color: rgb(209, 123, 15);
@@ -38,7 +39,6 @@ body aside {
 }
 
 body main {
-  /* background-color: deepskyblue; */
   padding: 10px;
   grid-area: main;
   background-color: rgb(183, 240, 173);
@@ -56,6 +56,11 @@ body footer {
   align-items: center;
 }
 
-img {
+.icon {
   padding: 15px;
+}
+
+.foto {
+  display: flex;
+  justify-content: center;
 }

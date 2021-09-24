@@ -13,6 +13,7 @@ form {
 }
 
 .titulo {
+  list-style: none;
   position: relative;
   padding: 10px;
   background-color: white;
