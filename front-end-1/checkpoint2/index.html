@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Checkpoint II</title>
+  </head>
+  <body>
+    <form>
+      <fieldset id="f1" class="fieldset">
+        <legend>Dados Pessoais</legend>
+
+        <label for="nome">Nome completo:</label>
+        <input
+          class="campo"
+          type="text"
+          id="nome"
+          placeholder="Seu nome..."
+          maxlength="100"
+        />
+
+        <label for="email">E-mail:</label>
+        <input
+          class="campo"
+          type="email"
+          id="email"
+          placeholder="Seu e-mail..."
+        />
+
+        <label for="telefone">Telefone (apenas números):</label>
+        <input
+          class="campo"
+          type="tel"
+          id="telefone"
+          placeholder="(99)99999-9999"
+        />
+
+        <label for="data-nascimento">Data de nascimento:</label>
+        <input class="campo" type="date" id="data-nascimento" />
+
+        <label>É maior de idade?</label>
+        <div>
+          <input class="campo" type="radio" id="sim" name="maior-idade" />
+          <label for="sim">Sim</label>
+          <input class="campo" type="radio" id="nao" name="maior-idade" />
+          <label for="nao">Não</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="fieldset">
+        <legend>Interesses</legend>
+
+        <label for="ponto-turistico">Selecione um ponto turístico:</label>
+        <!--  <input
+        list="pontos-turisticos"
+        name="ponto-turistico"
+        id="ponto-turistico"
+      /> -->
+        <select class="campo" id="pontos-turisticos">
+          <option value="Mineirão">Mineirão</option>
+          <option value="Lagoa da Pampulha">Lagoa da Pampulha</option>
+          <option value="Praça do Papa">Praça do Papa</option>
+        </select>
+
+        <label>Quais os seus interesses?</label>
+        <div>
+          <input class="campo" type="checkbox" id="turismo" />
+          <label for="turismo">Turismo</label>
+          <input class="campo" type="checkbox" id="residencia" />
+          <label for="residencia">Residência</label>
+          <input class="campo" type="checkbox" id="estudante" />
+          <label for="estudante">Estudante</label>
+        </div>
+      </fieldset>
+
+      <div>
+        <button type="reset">Limpa</button>
+        <button type="submit">Envia</button>
+
+        <!-- <input class="button" type="reset" />
+        <input class="button" type="submit" /> -->
+      </div>
+    </form>
+  </body>
+</html>
