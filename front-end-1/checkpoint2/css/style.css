@@ -56,3 +56,11 @@ button {
   padding: 0.5rem;
   margin: 20px 10px;
 }
+
+a {
+  text-decoration: none;
+  color: #6290c3;
+}
+footer {
+  color: white;
+}
