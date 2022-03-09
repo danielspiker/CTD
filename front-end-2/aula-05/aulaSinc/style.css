@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-menu {
+  background-color: chartreuse;
+  width: 200px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -200px;
+  transition: 0.5s;
+}
+
+.main-menu-opened {
+  left: 0;
+}
