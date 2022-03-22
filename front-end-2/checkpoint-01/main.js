@@ -6,7 +6,7 @@ let postReference = document.querySelector('#post')
 
 let posts = []
 
-postReference.addEventListener('click', function (e) {
+postReference.addEventListener('click', e => {
   e.preventDefault()
   let titulo = tituloReference.value
   let texto = textoReference.value
@@ -21,6 +21,4 @@ postReference.addEventListener('click', function (e) {
       <p>${posts[0].texto}</p>
     </div>
     `
-
-  console.log(posts)
 })

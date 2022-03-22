@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'PT serif';
+  background-color: black;
 }
 
 .item {
@@ -22,4 +25,50 @@ body {
 
 .item img {
   width: 100%;
+}
+
+h1,
+span,
+label {
+  color: aliceblue;
+  font-family: 'PT serif';
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+#post {
+  background-color: cornflowerblue;
+  color: aliceblue;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 30px;
+  padding: 10px 60px;
+  border-style: none;
+  font-family: 'PT serif';
+}
+
+#post:hover {
+  background-color: rgb(143, 175, 236);
+  color: rgb(24, 22, 22);
+  transition: 0.3s;
+}
+
+input {
+  margin-bottom: 5px;
+  border-style: none;
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  background-color: rgb(211, 233, 243);
 }
