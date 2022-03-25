@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesa de Trabalho - aula 12</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <fieldset>
+        <form id="form1" action="">
+          <label for="titulo">Título</label>
+          <input type="text" id="titulo" placeholder="Nome do lembrete" />
+
+          <label for="lembrete">Lembrete</label>
+          <div>
+            <textarea
+              id="lembrete"
+              cols="30"
+              rows="5"
+              placeholder="Escreva seu lembrete"
+            ></textarea>
+          </div>
+
+          <button type="submit" id="botaoEnviar">Enviar</button>
+          <button id="verLembretes">Ver Lembretes</button>
+
+          <div id="erro" class="container"></div>
+        </form>
+      </fieldset>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
