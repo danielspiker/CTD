@@ -98,13 +98,11 @@ button {
   justify-content: center;
 }
 
-.dadosLogin small {
-  color: red;
-    display: none;
-    font-size: 12px;
+.erro {
+  margin-top: 10px;
+  padding: 10px;
+  color: brown;
+  font-size:  0.7rem;
+  list-style: none;
+  background-color: darksalmon;
 }
-
-.dadosLogin.erro small {
-  display: block;
-}
-

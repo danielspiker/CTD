@@ -26,17 +26,17 @@
 
         <div class="dadosLogin">
           <label> Email:</label>
-          <input id="inputEmail" type="email" required />
-          <small>Preencher com e-mail válido</small>
+          <input id="inputEmail" type="email" />
         </div>
 
         <div class="dadosLogin">
           <label> Senha:</label>
-          <input id="inputPassword" type="password" minlength="3" required />
-          <small>Preencher com pelo menos 3 dígitos</small>
+          <input id="inputPassword" type="password" minlength="3" />
         </div>
 
-        <button type="submit">Acessar</button>
+        <div class="erro" id="errorList" hidden></div>
+
+        <button id="buttonLogin" type="submit">Acessar</button>
       </form>
 
       <div class="ingressar">
@@ -44,6 +44,6 @@
       </div>
     </div>
 
-    <script src="./scripts/index.js"></script>
+    <script src="./scripts/login.js"></script>
   </body>
 </html>

@@ -134,7 +134,7 @@ a {
   box-shadow: 2px 2px 5px lightgrey;
   border: 2px solid var(--secondary);
   z-index: 2;
-  transition: background-color 200ms linear;
+  transition: background-color 00ms linear;
 }
 
 .tarefa .not-done:hover {
@@ -224,20 +224,21 @@ a {
   text-decoration: line-through;
 }
 
-#skeleton .descricao{
+.skeleton .descricao{
   background-color: rgb(189, 189, 189);
 }
-#skeleton p{
+.skeleton p{
   background-color: rgb(214, 214, 214);
   color: rgb(214, 214, 214);
 }
-#skeleton .not-done{
+.skeleton .not-done{
   background-color: rgb(189, 189, 189);
 }
 
-#skeleton{
+.skeleton{
   animation: trasparencia 1s infinite;
 }
+
 @keyframes trasparencia {
   0%{ opacity: 0.5;}
   100%{ opacity: 0.8;}

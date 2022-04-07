@@ -57,5 +57,33 @@ formRef.addEventListener('submit', e => {
   if (errorListUl.querySelectorAll('li').length > 0) {
     errorListRef.hidden = ''
     e.preventDefault()
+  } else {
+    e.preventDefault()
+    let requestHeaders = {
+      'Content-Type': 'application/json'
+    }
+
+    let users = {
+      firstName: `${nameRef.value}`,
+      lastName: `${surnameRef.value}`,
+      email: `${emailRef.value}`,
+      password: `${passwordRef.value}`
+    }
+
+    let configuration = {
+      method: 'POST',
+      body: JSON.stringify(users),
+      headers: requestHeaders
+    }
+
+    fetch('https://ctd-todo-api.herokuapp.com/v1/users', configuration)
+      .then(response => {
+        return response.json()
+      })
+      .then(data => {
+        console.log(data)
+        localStorage.setItem('token', data.jwt)
+        location.href = 'index.html'
+      })
   }
 })
