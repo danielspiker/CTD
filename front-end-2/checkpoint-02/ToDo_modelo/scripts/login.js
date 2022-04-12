@@ -63,7 +63,7 @@ formularioLoginRef.addEventListener('submit', e => {
           location.href = 'tarefas.html'
         })
       } else {
-        errorListRef.innerHTML = `<p>❌ Usuário inválido</p>`
+        errorListRef.innerHTML = `<p>❌ Usuário e/ou senha inválidos</p>`
       }
     })
   }
