@@ -80,9 +80,9 @@ formRef.addEventListener('submit', e => {
       .then(response => {
         return response.json()
       })
-      .then(data => {
-        console.log(data)
-        localStorage.setItem('token', data.jwt)
+      .then(user => {
+        //console.log(user)
+        localStorage.setItem('token', user.jwt)
         location.href = 'index.html'
       })
   }

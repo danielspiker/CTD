@@ -1,4 +1,5 @@
 // RECEBE DADOS DO LOGIN E PÕE NOME DO USUARIO E INICIAIS NO TOPO DA TELA ==================
+
 let requestConfig = {
   headers: {
     'Content-Type': 'application/json',
@@ -45,7 +46,7 @@ fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfig)
       </li>`
       } else {
         tasksDone.innerHTML += `<li class="tarefa">
-        <div class="not-done" ></div>
+        <div class="not-done" onclick="taskNotDone(${task.id})"></div>
         <div class="descricao">
           <p class="nome">${task.description}</p>
           <p class="timestamp">Criada em: ${dateCreated.toLocaleDateString()}</p>
@@ -64,7 +65,7 @@ fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfig)
 
 let formRef = document.querySelector('.nova-tarefa')
 
-formRef.addEventListener('submit', function (e) {
+formRef.addEventListener('submit', e => {
   e.preventDefault()
 
   let newTask = document.querySelector('#novaTarefa')
@@ -94,18 +95,9 @@ formRef.addEventListener('submit', function (e) {
   )
 })
 
-// FAZ 'LOGOFF' APAGANDO O TOKEN DO LOCALSTORAGE E RETORNANDO PRO INDEX ======================
+// APAGA TAREFA =============================================================
 
-let closeAppRef = document.querySelector('#closeApp')
-
-closeAppRef.addEventListener('click', e => {
-  localStorage.removeItem('token')
-  location.href = 'index.html'
-})
-
-//APAGA TAREFA
-
-function deleteTask(id) {
+let deleteTask = id => {
   fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, {
     method: 'DELETE',
     headers: {
@@ -119,9 +111,11 @@ function deleteTask(id) {
   })
 }
 
+// PASSA NOVAS TAREFAS PARA TAREFAS TERMINADAS ====================================
+
 let notDone = document.querySelector('#not-done')
 
-function taskDone(id) {
+let taskDone = id => {
   fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, {
     method: 'PUT',
     body: JSON.stringify({ completed: true }),
@@ -135,3 +129,29 @@ function taskDone(id) {
     }
   })
 }
+
+// PASSA TAREFAS TERMINADAS PARA NOVAS TAREFAS =================================
+
+let taskNotDone = id => {
+  fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({ completed: false }),
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: localStorage.getItem('token')
+    }
+  }).then(response => {
+    if (response.ok) {
+      location.reload()
+    }
+  })
+}
+
+// FAZ 'LOGOFF' APAGANDO O TOKEN DO LOCALSTORAGE E RETORNANDO PRO INDEX ======================
+
+let closeAppRef = document.querySelector('#closeApp')
+
+closeAppRef.addEventListener('click', e => {
+  localStorage.removeItem('token')
+  location.href = 'index.html'
+})
