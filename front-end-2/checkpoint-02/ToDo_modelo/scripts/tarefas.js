@@ -36,7 +36,7 @@ fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfig)
         <div class="not-done" onclick="taskDone(${task.id})"></div>
         <div class="descricao">
           <p class="nome">${task.description}</p>
-          <p class="timestamp">Criada em: ${dateCreated.toLocaleDateString()}</p>
+          <p class="timestamp">Procrastinado em: ${dateCreated.toLocaleDateString()}</p>
           <div class="trash">
             <button class="trashBotao" onclick="deleteTask(${task.id})">
               <img  src="./assets/trash.png" />
@@ -49,7 +49,7 @@ fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfig)
         <div class="not-done" onclick="taskNotDone(${task.id})"></div>
         <div class="descricao">
           <p class="nome">${task.description}</p>
-          <p class="timestamp">Criada em: ${dateCreated.toLocaleDateString()}</p>
+          <p class="timestamp">Procrastinado em: ${dateCreated.toLocaleDateString()}</p>
           <div class="trash">
             <button class="trashBotao" onclick="deleteTask(${task.id})">
               <img  src="./assets/trash.png" />

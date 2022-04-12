@@ -36,6 +36,10 @@ a {
   margin-left: .7em;
 }
 
+.user-image {
+  align-items: center;
+}
+
 #closeApp{
   margin-left: 15px;
   font-size: .7em;

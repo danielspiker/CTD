@@ -54,15 +54,6 @@ label {
   font-size: 0.8em;
 }
 
-.erro ul{
-  margin-top: 10px;
-  padding: 10px;
-  color: brown;
-  font-size:  0.7rem;
-  list-style: none;
-  background-color: darksalmon;
-}
-
 button {
   padding: 0.5em 3em;
   background-color: var(--primary);
@@ -73,8 +64,18 @@ button {
 }
 
 .form-header {
-  color: grey;
+  text-align: center;
+  border-radius: 4px;
+  padding: 1rem;
+  color: whitesmoke;
+  font-weight: bolder;
   font-size: 2em;
+  background: var(--primary)
+}
+.form-header .sub {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: .8rem;
 }
 .ingressar {
   text-align: center;
@@ -99,7 +100,16 @@ button {
 }
 
 .erro {
+  border-radius: 4px;
   margin-top: 10px;
+  padding: 10px;
+  color: brown;
+  font-size:  0.7rem;
+  list-style: none;
+  background-color: darksalmon;
+}
+
+.erro ul{
   padding: 10px;
   color: brown;
   font-size:  0.7rem;
