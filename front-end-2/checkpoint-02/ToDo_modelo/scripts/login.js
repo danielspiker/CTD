@@ -1,3 +1,5 @@
+import darkMode from './darkMode.js'
+
 let emailRef = document.querySelector('#inputEmail')
 let senhaRef = document.querySelector('#inputPassword')
 
@@ -42,4 +44,10 @@ formularioLoginRef.addEventListener('submit', e => {
       }
     })
   }
+})
+
+let colorModeButtonRef = document.querySelector('.colorModeButton')
+
+colorModeButtonRef.addEventListener('click', e => {
+  darkMode()
 })

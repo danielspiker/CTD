@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To-Do App</title>
+    <title>Checkpoint 2 - Front-End 2</title>
 
     <!-- ---------------- estilos compartilhados entre login e signup ---------------- -->
     <link rel="stylesheet" href="styles/acesso.css" />
@@ -12,15 +12,21 @@
     <!-- ---------------------- lógica aplicada no login ----------------------- -->
   </head>
 
-  <body>
-    <div class="left">
+  <body class="">
+    
+  </div>
+    <div class="left darkLight">
       <img src="./assets/pessoa-login.png" alt="" />
     </div>
 
-    <div class="right">
-      <form id="formularioLogin">
+    <button class="colorModeButton">
+      <img src="https://img.icons8.com/ios-filled/344/ffffff/moon-symbol.png" alt="">
+    </button>
+
+    <div class="right darkDark">
+      <form id="formularioLogin" class="formulario darkLight">
         <div class="form-header">
-          <p>TU-Do App</p>
+          <p>Tu.Do App</p>
           <p class="sub">Onde você deixa TUDO pra depois</p>
         </div>
         <h1>Log In</h1>
@@ -48,8 +54,7 @@
       <div class="ingressar">
         <a href="signup.html">Não possui conta? Crie agora mesmo</a>
       </div>
-    </div>
-
-    <script src="./scripts/login.js"></script>
+      
+    <script src="./scripts/login.js" type="module"></script>
   </body>
 </html>

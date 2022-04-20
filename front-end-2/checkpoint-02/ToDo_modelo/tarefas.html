@@ -1,61 +1,80 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ----------------------------- estilos CSS ----------------------------- -->
+    <link rel="stylesheet" href="./styles/tarefas.css" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ----------------------------- estilos CSS ----------------------------- -->
-  <link rel="stylesheet" href="./styles/tarefas.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-  <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
-    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-  <!-- ----------------------------- sweet alert ----------------------------- -->
-  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-  <!-- CDN example (unpkg) -->
-  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+    <!-- ------------------- Biblioteca de icones - Fontawesome -------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- ----------------------------- sweet alert ----------------------------- -->
 
+    <!-- CDN example (unpkg) -->
+    <!-- <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 
-  <title>To-Do App</title>
-</head>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 
-<body>
-  <header>
-    <nav>
-      <a href="#">Tarefas</a>
-    </nav>
+    <title>To-Do App</title>
+  </head>
 
-    <div class="user-info">
-      <p id="nomeUsuario">Nome usuário</p>
-      <div class="user-image"></div>
-      <button id="closeApp">Finalizar sessão</i>
+  <body class="">
+    <header>
+      <nav>
+        <a href="#">Tarefas</a>
+      </nav>
+
+      <div class="user-info">
+        <p id="nomeUsuario">Nome usuário</p>
+        <div class="user-image"></div>
+        <button id="closeApp">Finalizar sessão</button>
+      </div>
+    </header>
+
+    <form class="nova-tarefa darkDark">
+      <input
+        id="novaTarefa"
+        class="darkDark"
+        type="text"
+        placeholder="O que deixarei pra depois?"
+      />
+      <button id="addTarefa" type="submit">
+        <img src="./assets/plus.png" alt="Adicionar uma nova tarefa" />
+      </button>
+    </form>
+
+    <ul class="tarefas-pendentes skeleton"></ul>
+
+    <h2 class="titulo-terminadas darkDark">Nem acredito que terminei</h2>
+    <ul class="tarefas-terminadas"></ul>
+
+    <div>
+      <button class="colorModeButton">
+        <img
+          src="https://img.icons8.com/ios-filled/344/ffffff/moon-symbol.png"
+          alt=""
+        />
       </button>
     </div>
-  </header>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <form class="nova-tarefa">
-    <!-- <div class="not-done ">
-      <button id="not-done"></button>
-    </div> -->
-    <input id="novaTarefa" type="text" placeholder="Nova tarefa">
-    <button id="addTarefa" type="submit">
-      <img src="./assets/plus.png" alt="Adicionar uma nova tarefa">
-    </button>
-  </form>
+    <script>
+      AOS.init()
+    </script>
 
-  <ul class="tarefas-pendentes skeleton"></ul>
-
-  <h2 class="titulo-terminadas">Tarefas terminadas</h2>
-  <ul class="tarefas-terminadas"></ul>
-
-  <script src="./scripts/tarefas.js"></script>
-</body>
-
+    <script src="./scripts/tarefas.js"></script>
+  </body>
 </html>

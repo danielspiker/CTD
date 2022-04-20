@@ -1,3 +1,5 @@
+import darkMode from './darkMode.js'
+
 function selectId(id) {
   return document.getElementById(id)
 }
@@ -81,9 +83,14 @@ formRef.addEventListener('submit', e => {
         return response.json()
       })
       .then(user => {
-        //console.log(user)
         localStorage.setItem('token', user.jwt)
         location.href = 'index.html'
       })
   }
+})
+
+let colorModeButtonRef = document.querySelector('.colorModeButton')
+
+colorModeButtonRef.addEventListener('click', e => {
+  darkMode()
 })

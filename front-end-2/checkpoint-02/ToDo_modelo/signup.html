@@ -9,14 +9,22 @@
     <link rel="stylesheet" href="styles/acesso.css" />
   </head>
 
-  <body>
-    <div class="left">
+  <body class="">
+    <button class="colorModeButton">
+      <img
+        src="https://img.icons8.com/ios-filled/344/ffffff/moon-symbol.png"
+        alt=""
+      />
+    </button>
+
+    <div class="left darkLight">
       <img src="./assets/pessoa-login.png" alt="" />
     </div>
-    <div class="right">
-      <form id="contato-form">
+
+    <div class="right darkDark">
+      <form id="contato-form" class="formulario darkLight">
         <div class="form-header">
-          <p>TU-Do App</p>
+          <p>Tu.Do App</p>
           <p class="sub">Onde você deixa TUDO pra depois</p>
         </div>
         <h1>Sign Up</h1>
@@ -52,6 +60,6 @@
         <a href="index.html">Já possui conta? Acesse aqui</a>
       </div>
     </div>
-    <script src="./scripts/signup.js"></script>
+    <script src="./scripts/signup.js" type="module"></script>
   </body>
 </html>

@@ -31,9 +31,9 @@ fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfig)
 
       tasksPending.classList.remove('skeleton')
 
-      if (task.completed == false) {
-        tasksPending.innerHTML += `<li class="tarefa">
-        <div class="not-done" onclick="taskDone(${task.id})"></div>
+      if (!task.completed) {
+        tasksPending.innerHTML += `<li class="tarefa" data-aos="fade-up">
+        <div class="not-done" onclick="taskDone(${task.id}, true)"></div>
         <div class="descricao">
           <p class="nome">${task.description}</p>
           <p class="timestamp">Procrastinado em: ${dateCreated.toLocaleDateString()}</p>
@@ -45,8 +45,8 @@ fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', requestConfig)
         </div>
       </li>`
       } else {
-        tasksDone.innerHTML += `<li class="tarefa">
-        <div class="not-done" onclick="taskNotDone(${task.id})"></div>
+        tasksDone.innerHTML += `<li class="tarefa" data-aos="fade-down">
+        <div class="not-done" onclick="taskDone(${task.id}, false)"></div>
         <div class="descricao">
           <p class="nome">${task.description}</p>
           <p class="timestamp">Procrastinado em: ${dateCreated.toLocaleDateString()}</p>
@@ -86,13 +86,23 @@ formRef.addEventListener('submit', e => {
     headers: requestHeaders
   }
 
-  fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', configuration).then(
-    response => {
-      if (response.ok) {
-        location.reload()
+  if (task.description != '') {
+    fetch('https://ctd-todo-api.herokuapp.com/v1/tasks', configuration).then(
+      response => {
+        if (response.ok) {
+          location.reload()
+        }
       }
-    }
-  )
+    )
+  } else {
+    // alert('Preencha o espaço em branco')
+
+    Swal.fire({
+      icon: 'error',
+      title: 'Epa...',
+      text: 'Não deixe o campo em branco!'
+    })
+  }
 })
 
 // APAGA TAREFA =============================================================
@@ -113,29 +123,10 @@ let deleteTask = id => {
 
 // PASSA NOVAS TAREFAS PARA TAREFAS TERMINADAS ====================================
 
-let notDone = document.querySelector('#not-done')
-
-let taskDone = id => {
+let taskDone = (id, completed) => {
   fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, {
     method: 'PUT',
-    body: JSON.stringify({ completed: true }),
-    headers: {
-      'Content-Type': 'application/json',
-      Authorization: localStorage.getItem('token')
-    }
-  }).then(response => {
-    if (response.ok) {
-      location.reload()
-    }
-  })
-}
-
-// PASSA TAREFAS TERMINADAS PARA NOVAS TAREFAS =================================
-
-let taskNotDone = id => {
-  fetch(`https://ctd-todo-api.herokuapp.com/v1/tasks/${id}`, {
-    method: 'PUT',
-    body: JSON.stringify({ completed: false }),
+    body: JSON.stringify({ completed: completed }),
     headers: {
       'Content-Type': 'application/json',
       Authorization: localStorage.getItem('token')
@@ -154,4 +145,19 @@ let closeAppRef = document.querySelector('#closeApp')
 closeAppRef.addEventListener('click', e => {
   localStorage.removeItem('token')
   location.href = 'index.html'
+})
+
+// DARK MODE ============================================
+
+let bodyRef = document.querySelector('body')
+let colorModeButtonRef = document.querySelector('.colorModeButton')
+
+colorModeButtonRef.addEventListener('click', e => {
+  bodyRef.classList.toggle('dark')
+
+  if (bodyRef.classList.contains('dark')) {
+    colorModeButtonRef.innerHTML = `<img src="https://img.icons8.com/external-flatart-icons-outline-flatarticons/344/ffffff/external-sun-vacations-flatart-icons-outline-flatarticons.png">`
+  } else {
+    colorModeButtonRef.innerHTML = `<img src="https://img.icons8.com/ios-filled/344/ffffff/moon-symbol.png" alt="">`
+  }
 })
